@@ -19,6 +19,8 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - name: install deps, node ci
         run: npm ci
+      - name: Lint
+        run: npm run lint
       - name: Build
         run: npm run build
       - name: Test
